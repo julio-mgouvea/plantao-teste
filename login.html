@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - PlantaoSalvo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">PlantaoSalvo</a>
+    </div>
+  </nav>
+
+  <div class="alert alert-info rounded-0 text-center m-0">
+    <strong>Aviso de Privacidade:</strong> Os dados dos pacientes são excluídos automaticamente após 24h.
+  </div>
+
+  <main class="container mt-5" style="max-width: 450px;">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white text-center">
+        <h4>Sistema de Passagem de Plantão Médico</h4>
+      </div>
+      <div class="card-body">
+        <div class="btn-group w-100 mb-3">
+          <button id="btn-login" class="btn btn-outline-primary active">Login</button>
+          <button id="btn-cadastro" class="btn btn-outline-secondary">Cadastrar</button>
+        </div>
+
+        <form id="form-login">
+          <div class="mb-3">
+            <label for="login-usuario" class="form-label">E-mail</label>
+            <input type="text" id="login-usuario" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="login-senha" class="form-label">Senha</label>
+            <input type="password" id="login-senha" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Entrar</button>
+        </form>
+
+        <form id="form-cadastro" class="d-none">
+          <div class="mb-3">
+            <label for="novo-usuario" class="form-label">E-mail</label>
+            <input type="text" id="novo-usuario" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="nova-senha" class="form-label">Senha</label>
+            <input type="password" id="nova-senha" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="confirmar-senha" class="form-label">Confirmar Senha</label>
+            <input type="password" id="confirmar-senha" class="form-control" required />
+          </div>
+          <button type="submit" class="btn btn-success w-100">Criar Conta</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    PlantãoSalvo © 2025
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js"></script>
+
+  <!-- Script de autenticação -->
+  <script src="js/auth.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
